@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1>Login</h1>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+      
+      <form action="/login" accept-charset="UTF-8" method="post">
+        <input name="utf8" type="hidden" value="&#x2713;" />
+        <input type="hidden" name="authenticity_token" value="i_yMUUu2UhWxpDB7mERhpQFzWA30EOIj6Kk48HyZxnvwOlFlPb1PLPooVUYNcRXdMKfmVC7i3JOq9LC3pkwEvw" />
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input class="form-control" type="email" name="email" id="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input class="form-control" type="password" name="password" id="password" />
+        </div>
+        <div class="actions">
+          <input type="submit" name="commit" value="Login" class="btn btn-primary" data-disable-with="Login" />
+        </div>
+      </form>
+      <div class='text-center'>
+        <%= link_to "Signup", new_user_path %>
+        <a href="#">Forget Password?</a>
+      </div>
+    </div>
+  </div>
+</div>

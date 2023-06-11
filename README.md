@@ -10,3 +10,4 @@
   - `bundle config --local build.sassc -- --disable-march-tune-native`
   - `bundle install`
 - データベース、テーブルを作成
+# sorcery-
